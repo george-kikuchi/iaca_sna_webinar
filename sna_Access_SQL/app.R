@@ -36,7 +36,7 @@ names(name.list)[1] <- 'person_id'
 
 # user interface ---------
 ui <- dashboardPage(skin = "black",
-  dashboardHeader(title = "Network AnalyzeR - Excel edition", titleWidth = 400),
+  dashboardHeader(title = "Network AnalyzeR - Access edition", titleWidth = 400),
   
   dashboardSidebar(
 

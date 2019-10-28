@@ -1,4 +1,4 @@
-#### SNA apps for IACA webinar
+### SNA apps for IACA webinar
 
 This repository contains presentation, tutorial, and R files for an IACA webinar on Social Network Analysis.  In particular, the SNA app utilizes R, RStudio and Shiny to examine criminal networks.  There are two sets of apps; one starts with Excel files as an input and the other directly queries database (MS Access or SQL).
 

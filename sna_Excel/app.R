@@ -1,13 +1,9 @@
 
-# to do
-# legend; visNetworkProxy does not take visLegend
-# use df adn group?
+# max file size and port/host settings (commented out)
+options(list(shiny.maxRequestSize = 500*1024^2, 
+             launch.browser = TRUE)) #, shiny.port = 5155, shiny.host = "0.0.0.0"))
 
-
-# max file size
-options(shiny.maxRequestSize = 500*1024^2)
-
-# check libraries again (just double checking)
+# check libraries and install missing ones
 list.of.packages <- c("shiny", "shinydashboard", 
                       "data.table", "tidyr", "dplyr", "plyr",
                       "visNetwork", "igraph", "sqldf", "readxl", "leaflet")
