@@ -139,9 +139,16 @@ server <- function(input, output, session){
                                    " where ", inct_id, " in (", 
                                    paste0(temp3_inct, collapse=", "), ")"))
       
+      #browser()
+
+      colnames(df.all)[colnames(df.all) == inct_id]   <- "inct_id"
+      colnames(df.all)[colnames(df.all) == person_id] <- "person_id"
+      colnames(df.all)[colnames(df.all) == name]      <- "name"
+            
       if (nrow(df.all) ==0){
         return(NULL)
       }  else {
+        #browser()
         df.all 
       }
     })    
@@ -255,9 +262,9 @@ server <- function(input, output, session){
     table.df <- table.df %>% 
       mutate(person_id = as.character(person_id),
              inct_id   = as.character(inct_id),
-             name = as.factor(name),
-             date = as.Date(date),
-             type = as.factor(type)
+             name = as.factor(name)
+             #date = as.Date(date),
+             #type = as.factor(type)
       )
     
     DT::datatable(table.df, filter="top", selection = 'none', rownames = FALSE,
